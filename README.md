@@ -33,26 +33,6 @@ This project analyzes New Zealand aquaculture export data (FY23–25) to support
 DAX for Year-over-Year Growth
 The following robust DAX was implemented to correctly calculate YoY growth using the discrete Year column (FY23, FY24, FY25) instead of standard calendar functions:
 
-# Code snippet
-
-YoY Export Value Growth % =
-```
-VAR CurrentYearValue = [Total Export Value]
-VAR PreviousYearValue = 
-    CALCULATE(
-        [Total Export Value],
-        FILTER(
-            ALL('exports'),
-            'exports'[Year] = MAX('exports'[Year]) - 1
-        )
-    )
-RETURN
-    DIVIDE(
-        CurrentYearValue - PreviousYearValue,
-        PreviousYearValue,
-        BLANK()
-    )
-```
 # Key Business Insights
 The following insights address the core business questions and were derived from the final Power BI report visualizations (e.g., scatter plots of Price vs. Growth, and detailed matrix tables).
 
