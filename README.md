@@ -67,7 +67,7 @@ The following insights address the core business questions and were derived from
 
      
 # Repository Structure
-├── Power_BI_Assessment_1.pbix  # Final Power BI Report File
+├── Power_BI_Assessment_1.pbix # Final Power BI Report File
 
 ├── SQLQuery_1.sql             # Consolidated ETL Script
 
