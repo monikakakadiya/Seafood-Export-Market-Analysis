@@ -35,7 +35,8 @@ The following robust DAX was implemented to correctly calculate YoY growth using
 
 # Code snippet
 
-YoY Export Value Growth % = 
+YoY Export Value Growth % =
+```
 VAR CurrentYearValue = [Total Export Value]
 VAR PreviousYearValue = 
     CALCULATE(
@@ -51,24 +52,27 @@ RETURN
         PreviousYearValue,
         BLANK()
     )
+```
 # Key Business Insights
 The following insights address the core business questions and were derived from the final Power BI report visualizations (e.g., scatter plots of Price vs. Growth, and detailed matrix tables).
 
 # 1. Right Market: Which countries offer best growth/pricing?
-    The ideal market is categorized as one showing both high Avg Price per kg and high YoY Export Value Growth %.
+
+The ideal market is categorized as one showing both high Avg Price per kg and high YoY Export Value Growth %.
 
     
 # 2. Right Product: Which species/products are most profitable?
-    Profitability is defined by the highest Avg Price per kg across all segments.
+
+Profitability is defined by the highest Avg Price per kg across all segments.
 
    
 # 3. Right Price: What's the optimal pricing strategy by market?
-     The optimal strategy dictates where to sell high-value products and where to focus on volume/efficiency.
+
+The optimal strategy dictates where to sell high-value products and where to focus on volume/efficiency.
 
      
 # Repository Structure
 ├── Power_BI_Assessment_1.pbix # Final Power BI Report File
 
-├── SQLQuery_1.sql             # Consolidated ETL Script
-
-└── README.md                  # Project Summary and Key Findings (this file)
+├── SQLQuery_1.sql             
+└── README.md                  
